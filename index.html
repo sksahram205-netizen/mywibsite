@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ultimate Digital Services Pro</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:tahoma;scroll-behavior:smooth}
+
+body{
+background:radial-gradient(circle at top,#0b1220,#020617);
+color:#fff;
+overflow-x:hidden;
+}
+
+header{
+position:fixed;
+top:0;
+width:100%;
+background:rgba(255,255,255,0.06);
+backdrop-filter:blur(12px);
+z-index:999;
+box-shadow:0 10px 25px rgba(0,0,0,0.3);
+}
+
+nav{
+display:flex;
+justify-content:center;
+gap:18px;
+flex-wrap:wrap;
+padding:12px;
+}
+
+nav a{
+color:#fff;
+text-decoration:none;
+padding:10px 16px;
+border-radius:12px;
+transition:0.3s;
+font-weight:bold;
+}
+
+nav a:hover{
+background:linear-gradient(45deg,#00c6ff,#7c3aed);
+transform:translateY(-3px);
+}
+
+.hero{
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.hero h1{
+font-size:56px;
+background:linear-gradient(45deg,#00c6ff,#ffffff,#8b5cf6);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.hero p{
+font-size:20px;
+max-width:700px;
+margin-top:15px;
+opacity:0.9;
+line-height:1.8;
+}
+
+.btn{
+margin-top:25px;
+padding:12px 26px;
+border-radius:14px;
+text-decoration:none;
+color:#fff;
+background:linear-gradient(45deg,#00c6ff,#7c3aed);
+transition:0.3s;
+display:inline-block;
+}
+
+.btn:hover{transform:translateY(-4px);}
+
+.section{
+padding:90px 20px;
+max-width:1100px;
+margin:auto;
+}
+
+.title{
+text-align:center;
+font-size:38px;
+margin-bottom:30px;
+color:#7dd3fc;
+}
+
+.accordion{
+background:rgba(255,255,255,0.05);
+border-radius:18px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,0.3);
+}
+
+.item{
+border-bottom:1px solid rgba(255,255,255,0.08);
+cursor:pointer;
+}
+
+.title-item{
+padding:18px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+font-weight:bold;
+background:rgba(255,255,255,0.03);
+font-size:18px;
+}
+
+.content{
+max-height:0;
+overflow:hidden;
+transition:0.5s;
+padding:0 18px;
+background:rgba(255,255,255,0.02);
+}
+
+.item.active .content{
+max-height:320px;
+padding:15px 18px;
+}
+
+.icon{transition:0.3s}
+.item.active .icon{transform:rotate(180deg)}
+
+.service-icon{margin-left:10px;color:#7dd3fc}
+
+.panel{
+background:rgba(255,255,255,0.06);
+padding:30px;
+border-radius:18px;
+line-height:2;
+}
+
+.reasons{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:18px;
+margin-top:20px;
+}
+
+.reason{
+background:rgba(255,255,255,0.05);
+padding:20px;
+border-radius:16px;
+text-align:center;
+transition:0.3s;
+}
+
+.reason:hover{
+transform:translateY(-6px);
+background:rgba(255,255,255,0.1);
+}
+
+.whatsapp-btn{
+position:fixed;
+bottom:20px;
+left:20px;
+background:#25D366;
+color:#fff;
+padding:14px 18px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+box-shadow:0 10px 25px rgba(0,0,0,0.3);
+z-index:9999;
+}
+
+footer{
+text-align:center;
+padding:25px;
+opacity:0.8;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<nav>
+<a href="#home">خانه</a>
+<a href="#services">خدمات</a>
+<a href="#why">چرا من</a>
+<a href="#about">درباره من</a>
+<a href="#contact">تماس</a>
+</nav>
+</header>
+
+<section class="hero" id="home">
+<h1>Ultimate Digital Services</h1>
+<p>طراحی سایت، رشد شبکه‌های اجتماعی و خدمات دیجیتال حرفه‌ای</p>
+<a class="btn" href="#services">مشاهده خدمات</a>
+</section>
+
+<section class="section" id="services">
+<h2 class="title">خدمات ما</h2>
+
+<div class="accordion">
+
+<div class="item" onclick="toggle(this)">
+<div class="title-item">
+<i class="fa-brands fa-tiktok service-icon"></i> TikTok Growth <span class="icon">⬇</span>
+</div>
+<div class="content"><p>• افزایش فالوور واقعی</p></div>
+</div>
+
+<div class="item" onclick="toggle(this)">
+<div class="title-item">
+<i class="fa-brands fa-instagram service-icon" style="color:#ff3b7a"></i> Instagram Boost <span class="icon">⬇</span>
+</div>
+<div class="content"><p>• رشد پیج</p></div>
+</div>
+
+<div class="item" onclick="toggle(this)">
+<div class="title-item">
+<i class="fa-brands fa-telegram service-icon" style="color:#24A1DE"></i> Telegram Services <span class="icon">⬇</span>
+</div>
+<div class="content"><p>• ممبر واقعی</p></div>
+</div>
+
+<div class="item" onclick="toggle(this)">
+<div class="title-item">
+<i class="fa-brands fa-youtube service-icon" style="color:#ff0000"></i> YouTube Promotion <span class="icon">⬇</span>
+</div>
+<div class="content">
+<p>• افزایش سابسکرایب</p>
+<p>• افزایش ویو واقعی</p>
+</div>
+</div>
+
+<div class="item" onclick="toggle(this)">
+<div class="title-item">
+<i class="fa-brands fa-whatsapp service-icon" style="color:#25D366"></i> WhatsApp Services <span class="icon">⬇</span>
+</div>
+<div class="content">
+<p>• پشتیبانی سریع</p>
+<a href="https://wa.me/937XXXXXXXX" target="_blank" style="color:#25D366;font-weight:bold">چت مستقیم واتساپ</a>
+</div>
+</div>
+
+</div>
+</section>
+
+<section class="section" id="why">
+<h2 class="title">چرا من را انتخاب کنید؟</h2>
+<div class="reasons">
+<div class="reason">⚡ سرعت بالا</div>
+<div class="reason">💎 کیفیت حرفه‌ای</div>
+<div class="reason">🤝 پشتیبانی 24/7</div>
+<div class="reason">🚀 رشد واقعی</div>
+<div class="reason">💰 قیمت مناسب</div>
+<div class="reason">🎯 نتیجه تضمینی</div>
+</div>
+</section>
+
+<section class="section" id="about">
+<h2 class="title">درباره من</h2>
+<div class="panel">خدمات دیجیتال حرفه‌ای با کیفیت بالا.</div>
+</section>
+
+<section class="section" id="contact">
+<h2 class="title">تماس</h2>
+<div class="panel">
+📞 07XXXXXXXX<br>
+💬 WhatsApp: <a href="https://wa.me/937XXXXXXXX">چت</a>
+</div>
+</section>
+
+<a class="whatsapp-btn" href="https://wa.me/937XXXXXXXX">💬 واتساپ</a>
+
+<footer>© 2026 Ultimate Digital Services</footer>
+
+<script>
+function toggle(el){
+  const items = document.querySelectorAll('.item');
+
+  items.forEach(i => {
+    if(i !== el){
+      i.classList.remove('active');
+    }
+  });
+
+  el.classList.toggle('active');
+}
+</script>
+
+</body>
+</html>
